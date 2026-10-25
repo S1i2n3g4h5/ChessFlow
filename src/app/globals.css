@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+/*
+ * ChessFlow design tokens ("Neon Arena", restrained):
+ * one dark navy ground, two surface steps, one cyan accent, and status colors used only for meaning.
+ * Use them as Tailwind utilities: bg-surface, border-line, text-muted, bg-accent, text-on-accent, ...
+ */
+@theme {
+  --color-canvas: #070b14;
+  --color-surface: #0d1424;
+  --color-raised: #141e33;
+  --color-hover: #1a2640;
+  --color-line: #1e2a42;
+  --color-line-strong: #2d3b58;
+
+  --color-ink: #e6edf7;
+  --color-muted: #94a3b8;
+
+  --color-accent: #22d3ee;
+  --color-accent-hover: #67e8f9;
+  --color-on-accent: #04252d;
+
+  --color-danger: #f87171;
+  --color-warn: #fbbf24;
+  --color-success: #34d399;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-chakra), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: rgb(34 211 238 / 0.3);
+}
